@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theick.io – Check Recent Instagram Followers</title>
+    <meta name="description" content="See who your favorite public Instagram accounts recently followed. Real-time notifications, no login required. Track any public profile with The Ick app.">
+    <meta name="keywords" content="instagram followers tracker, recent followers, instagram follow checker, who did instagram follow, theick, the ick app">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="theick.io – Check Recent Instagram Followers">
+    <meta property="og:description" content="Track any public Instagram account's recent follow activity. Get real-time notifications without logging in.">
+    <meta property="og:image" content="https://theickapp.github.io/app-icon.png">
+    <meta property="og:url" content="https://theickapp.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="theick.io – Check Recent Instagram Followers">
+    <meta name="twitter:description" content="Track who any public Instagram account recently followed. No login needed.">
+    <meta name="twitter:image" content="https://theickapp.github.io/app-icon.png">
+
+    <link rel="canonical" href="https://theickapp.github.io/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        (function() {
+            const saved = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = saved || (prefersDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header" id="top">
+        <div class="header-container">
+            <a href="/" class="logo-link">
+                <img src="app-icon.png" alt="The Ick" class="logo-icon">
+                <span class="logo-text">the<strong>ick</strong>.io</span>
+            </a>
+            <div class="header-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="#download" class="btn btn-primary header-cta">Download Free</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-glow"></div>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="badge-dot"></span>
+                            Instagram Follower Tracker
+                        </div>
+                        <h1 class="hero-title">
+                            See Who They<br>
+                            <span class="gradient-text">Just Followed</span>
+                        </h1>
+                        <p class="hero-desc">
+                            Track any <strong>public Instagram account's</strong> recent follow activity in real-time. Get instant notifications — no Instagram login required.
+                        </p>
+                        <div class="hero-keys">
+                            <span class="key-tag">🔔 Real-Time Alerts</span>
+                            <span class="key-tag">🔒 No Login Needed</span>
+                            <span class="key-tag">👁️ Public Profiles Only</span>
+                            <span class="key-tag">📊 Activity History</span>
+                        </div>
+                        <div class="hero-buttons" id="download">
+                            <a href="#" id="dl-btn-hero" class="btn btn-primary btn-large xai-dl-btn" data-is-dl-page="false">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Download App – Free
+                            </a>
+                            <a href="#features" class="btn btn-ghost btn-large">
+                                See Features
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">500K+</span>
+                                <span class="stat-label">Downloads</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-value">4.3★</span>
+                                <span class="stat-label">Rating</span>
+                            </div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-item">
+                                <span class="stat-value">100K+</span>
+                                <span class="stat-label">Monthly Users</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <img src="app-screenshot.png" alt="The Ick App Screenshot" class="screenshot-img">
+                                <!-- Animated follow feed overlay -->
+                                <div class="feed-overlay">
+                                    <div class="feed-item feed-anim-1">
+                                        <div class="feed-avatar" style="background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);"></div>
+                                        <div class="feed-info">
+                                            <div class="feed-name blurred">username_here</div>
+                                            <div class="feed-action">followed someone new</div>
+                                        </div>
+                                        <span class="feed-time">2m ago</span>
+                                    </div>
+                                    <div class="feed-item feed-anim-2">
+                                        <div class="feed-avatar" style="background: linear-gradient(135deg, #4A154B, #e01e5a);"></div>
+                                        <div class="feed-info">
+                                            <div class="feed-name blurred">another_user</div>
+                                            <div class="feed-action">followed someone new</div>
+                                        </div>
+                                        <span class="feed-time">7m ago</span>
+                                    </div>
+                                    <div class="feed-item feed-anim-3">
+                                        <div class="feed-avatar" style="background: linear-gradient(135deg, #36C5F0, #4A154B);"></div>
+                                        <div class="feed-info">
+                                            <div class="feed-name blurred">tracked_profile</div>
+                                            <div class="feed-action">followed someone new</div>
+                                        </div>
+                                        <span class="feed-time">15m ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-glow-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APP INFO SECTION -->
+        <section class="app-info-section">
+            <div class="container">
+                <div class="app-card">
+                    <div class="app-card-icon">
+                        <img src="app-icon.png" alt="The Ick App">
+                    </div>
+                    <div class="app-card-details">
+                        <h2 class="app-card-name">The Ick: Recent Follow Tracker</h2>
+                        <p class="app-card-sub">by theick.io</p>
+                        <div class="app-card-stars">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-text">4.3 (2,847 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="meta-grid">
+                        <div class="meta-item">
+                            <div class="meta-icon-wrap">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <p class="meta-label">Last Update</p>
+                                <p class="meta-value">June 2025</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-icon-wrap">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                            </div>
+                            <div>
+                                <p class="meta-label">Downloads</p>
+                                <p class="meta-value">500K+</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-icon-wrap">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                            </div>
+                            <div>
+                                <p class="meta-label">Website</p>
+                                <p class="meta-value link">theick.io</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-icon-wrap">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                            </div>
+                            <div>
+                                <p class="meta-label">Monthly Users</p>
+                                <p class="meta-value">100K+</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#download-section" class="btn btn-primary app-card-dl xai-dl-btn" data-is-dl-page="false">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download Free
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-eyebrow">Why Users Love It</p>
+                    <h2 class="section-title">Everything You Need to <span class="gradient-text">Stay in the Know</span></h2>
+                    <p class="section-sub">Track Instagram follow activity on any public account — privately, instantly, without compromise.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card feature-card-large">
+                        <div class="feature-card-icon">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                        </div>
+                        <h3 class="feature-title">Real-Time Notifications</h3>
+                        <p class="feature-desc">Get push alerts the moment a tracked account follows someone new. Never miss a single new follow again.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </div>
+                        <h3 class="feature-title">No Login Required</h3>
+                        <p class="feature-desc">Your Instagram account stays 100% safe. We never ask for your credentials.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <h3 class="feature-title">Activity History</h3>
+                        <p class="feature-desc">Browse a full timeline of who a public account has followed over time.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
+                        <h3 class="feature-title">Public Profile Tracking</h3>
+                        <p class="feature-desc">Track any public Instagram profile — celebrities, influencers, or anyone you're curious about.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-card-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                        </div>
+                        <h3 class="feature-title">Blurred Previews</h3>
+                        <p class="feature-desc">See blurred previews of new follows to tease upcoming reveals — upgrade to unlock full names.</p>
+                    </div>
+                    <div class="feature-card feature-card-wide">
+                        <div class="feature-card-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3 class="feature-title">Private & Secure</h3>
+                        <p class="feature-desc">Your tracking activity is 100% private. We only read publicly available Instagram data through official channels. No account access needed — ever.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="how-section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-eyebrow">Simple Steps</p>
+                    <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        </div>
+                        <h3>Download the App</h3>
+                        <p>Install The Ick from the app store. No account creation needed to get started.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
+                        <h3>Search a Public Profile</h3>
+                        <p>Type any public Instagram username. The Ick finds and loads their public following activity instantly.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                        </div>
+                        <h3>Get Notified Instantly</h3>
+                        <p>Enable push notifications and receive real-time alerts every time they follow a new account.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS / POPULARITY SECTION -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-big">500K+</div>
+                        <div class="stat-desc">Total Downloads</div>
+                        <div class="stat-bar-wrap">
+                            <div class="stat-bar" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-big">100K+</div>
+                        <div class="stat-desc">Monthly Active Users</div>
+                        <div class="stat-bar-wrap">
+                            <div class="stat-bar" style="width: 78%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-big">4.3★</div>
+                        <div class="stat-desc">Average App Rating</div>
+                        <div class="stat-bar-wrap">
+                            <div class="stat-bar" style="width: 86%"></div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-big">2M+</div>
+                        <div class="stat-desc">Profiles Tracked</div>
+                        <div class="stat-bar-wrap">
+                            <div class="stat-bar" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RATING SECTION -->
+        <section class="rating-section">
+            <div class="container">
+                <div class="rating-card">
+                    <div class="rating-left">
+                        <div class="big-rating">4.3</div>
+                        <div class="rating-stars-big">★★★★☆</div>
+                        <div class="rating-total">out of 2,847 ratings</div>
+                    </div>
+                    <div class="rating-bars">
+                        <div class="rating-bar-row">
+                            <span class="rating-label">5★</span>
+                            <div class="rating-bar-bg"><div class="rating-bar-fill" style="width: 52%"></div></div>
+                            <span class="rating-count">52%</span>
+                        </div>
+                        <div class="rating-bar-row">
+                            <span class="rating-label">4★</span>
+                            <div class="rating-bar-bg"><div class="rating-bar-fill" style="width: 24%"></div></div>
+                            <span class="rating-count">24%</span>
+                        </div>
+                        <div class="rating-bar-row">
+                            <span class="rating-label">3★</span>
+                            <div class="rating-bar-bg"><div class="rating-bar-fill" style="width: 13%"></div></div>
+                            <span class="rating-count">13%</span>
+                        </div>
+                        <div class="rating-bar-row">
+                            <span class="rating-label">2★</span>
+                            <div class="rating-bar-bg"><div class="rating-bar-fill" style="width: 6%"></div></div>
+                            <span class="rating-count">6%</span>
+                        </div>
+                        <div class="rating-bar-row">
+                            <span class="rating-label">1★</span>
+                            <div class="rating-bar-bg"><div class="rating-bar-fill" style="width: 5%"></div></div>
+                            <span class="rating-count">5%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="reviews-section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-eyebrow">User Reviews</p>
+                    <h2 class="section-title">What People Are <span class="gradient-text">Saying</span></h2>
+                </div>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Finally an app that actually works! I can see when the accounts I track follow new people without having to constantly check Instagram myself. Huge time saver."</p>
+                        <div class="review-author">
+                            <div class="review-avatar" style="background: linear-gradient(135deg, #f09433, #e6683c, #dc2743);">S</div>
+                            <div>
+                                <div class="review-name">sarah_k</div>
+                                <div class="review-date">May 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Love that I don't have to log in with my Instagram. The notifications are fast and accurate. Exactly what I needed."</p>
+                        <div class="review-author">
+                            <div class="review-avatar" style="background: linear-gradient(135deg, #4A154B, #e01e5a);">M</div>
+                            <div>
+                                <div class="review-name">mike_j21</div>
+                                <div class="review-date">April 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-stars">★★★★☆</div>
+                        <p class="review-text">"Super useful for keeping tabs on public accounts. The blurred preview feature is clever. Upgraded to premium and it's totally worth it."</p>
+                        <div class="review-author">
+                            <div class="review-avatar" style="background: linear-gradient(135deg, #36C5F0, #4A154B);">A</div>
+                            <div>
+                                <div class="review-name">ava.tracks</div>
+                                <div class="review-date">March 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHANGELOG -->
+        <section class="changelog-section">
+            <div class="container">
+                <div class="changelog-grid">
+                    <div class="changelog-card">
+                        <h2 class="changelog-title">Recent Changelog</h2>
+                        <div class="changelog-date-row">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            June 2025
+                        </div>
+                        <ul class="changelog-list">
+                            <li>Fixed minor bugs and improved overall app stability</li>
+                            <li>Enhanced notification delivery speed</li>
+                            <li>Updated privacy policy and terms of service links</li>
+                            <li>Improved compatibility with the latest OS versions</li>
+                            <li>General UI/UX enhancements and polish</li>
+                        </ul>
+                    </div>
+                    <div class="dev-card">
+                        <h2 class="changelog-title">Developer Profile</h2>
+                        <div class="dev-profile">
+                            <div class="dev-avatar">T</div>
+                            <div class="dev-info">
+                                <div class="dev-name">theick.io</div>
+                                <div class="dev-handle">/theickapp</div>
+                                <p class="dev-desc">Lead developer and UI/UX enthusiast crafting modern digital experiences for the mobile generation.</p>
+                                <div class="dev-social">
+                                    <a href="https://instagram.com/theickapp" class="social-link" title="Instagram" target="_blank" rel="noopener">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                                    </a>
+                                    <a href="https://x.com/theickapp" class="social-link" title="X / Twitter" target="_blank" rel="noopener">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOWNLOAD CTA -->
+        <section class="cta-section" id="download-section">
+            <div class="container">
+                <div class="cta-card">
+                    <div class="cta-glow"></div>
+                    <img src="app-icon.png" alt="The Ick" class="cta-icon">
+                    <h2 class="cta-title">Start Tracking Today</h2>
+                    <p class="cta-desc">Download The Ick for free and see what any public Instagram account is up to. No login, no risks, just insight.</p>
+                    <a href="#" id="dl-btn-cta" class="btn btn-primary btn-large btn-glow xai-dl-btn" data-is-dl-page="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download Free – theick.io
+                    </a>
+                    <p class="cta-note">Works on Android & iOS &nbsp;•&nbsp; Public profiles only &nbsp;•&nbsp; No account required</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECENT UPDATES SECTION -->
+        <section class="updates-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Recent <span class="gradient-text">Updates</span></h2>
+                </div>
+                <div class="updates-grid">
+                    <article class="update-card">
+                        <div class="update-date">June 5, 2025</div>
+                        <h3 class="update-title"><a href="#">How to Track Public Instagram Accounts Safely</a></h3>
+                        <p class="update-excerpt">A complete guide to using The Ick responsibly while protecting your own Instagram account privacy.</p>
+                    </article>
+                    <article class="update-card">
+                        <div class="update-date">May 20, 2025</div>
+                        <h3 class="update-title"><a href="#">Version 2.4 Released – Faster Notifications</a></h3>
+                        <p class="update-excerpt">Our latest update brings dramatically improved notification speed and a refreshed activity feed UI.</p>
+                    </article>
+                    <article class="update-card">
+                        <div class="update-date">April 30, 2025</div>
+                        <h3 class="update-title"><a href="#">Why "Public Only" is Our Core Design Choice</a></h3>
+                        <p class="update-excerpt">We explain why The Ick only works with public profiles and why that keeps you and your targets safe.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="app-icon.png" alt="The Ick" width="32" height="32">
+                        <span>the<strong>ick</strong>.io</span>
+                    </div>
+                    <p class="footer-tagline">Check who any public Instagram account recently followed. Real-time. No login. Free.</p>
+                    <p class="footer-disclaimer">Not affiliated with Instagram or Meta. Tracks public data only.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#download-section">Download</a></li>
+                        <li><a href="#top">Back to Top</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://instagram.com/theickapp" target="_blank" rel="noopener">Instagram</a></li>
+                        <li><a href="https://x.com/theickapp" target="_blank" rel="noopener">X (Twitter)</a></li>
+                        <li><a href="https://theick.io" target="_blank" rel="noopener">theick.io</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 theick.io — All rights reserved.</p>
+                <p>Built with ❤️ for the curious.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="#" id="floating-wa-btn" class="floating-wa-btn" aria-label="Share on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.124.551 4.195 1.599 6.012L.031 24l6.115-1.564A11.977 11.977 0 0 0 12.031 24c6.645 0 12.031-5.385 12.031-12.031S18.676 0 12.031 0zm0 22.016c-1.782 0-3.528-.479-5.064-1.39l-.364-.216-3.766.963.98-3.674-.236-.376A9.972 9.972 0 0 1 2.016 12.03C2.016 6.51 6.51 2.016 12.03 2.016s10.015 4.494 10.015 10.015-4.494 10.015-10.015 10.015z"/>
+            <path d="M17.481 14.394c-.297-.149-1.758-.868-2.03-.967-.272-.099-.47-.149-.668.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.297-.495.099-.198.05-.371-.025-.52-.074-.149-.668-1.61-.916-2.204-.242-.58-.487-.502-.668-.51l-.57-.008c-.198 0-.52.074-.792.371-.272.297-1.04 1.016-1.04 2.478 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.574-.086 1.758-.718 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.569-.347z"/>
+        </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
